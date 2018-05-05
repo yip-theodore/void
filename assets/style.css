@@ -1,0 +1,123 @@
+body {
+  background-color: #00050A;
+  overflow-x: hidden;
+}
+.gradient {
+  background: linear-gradient(to bottom left, #001026, #00050A);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+#canvasBg {
+  position: fixed;
+}
+[id*="canvas"] {
+  display: block;
+  top: 0;
+  left: 0;
+}
+[id*="canvasL"] {
+  position: absolute;
+  /* background-color: rgba(255,255,255, 0.2); */
+  transition: background-color 1s linear;
+  border-bottom: 1px solid white;
+}
+.space {
+  /* position: absolute; */
+  width: 100vw;
+  /* height: 100vh; */
+  /* background-color: #120823; */
+  perspective: 500px;
+  perspective-origin: 50vw 0;
+  /* opacity: 0.1; */
+}
+.backgroundBox {
+  position: absolute;
+  /* background-color: red; */
+  width: 100vw;
+  height: 500vh;
+}
+.background {
+  /* background-color: yellow; */
+  /* opacity: 0.1; */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  /* position: sticky; */
+  top: 0;
+}
+.star {
+  /* width: 2px; */
+  /* height: 2px; */
+  background-color: white;
+  position: absolute;
+  /* top: 50vh; */
+  /* left: 40vw; */
+}
+.layer4 {
+  transform: translateZ(400px);
+  opacity: 1;
+}
+.layer3 {
+  transform: translateZ(300px);
+  opacity: 0.9;
+}
+.layer2 {
+  transform: translateZ(200px);
+  opacity: 0.8;
+}
+.layer1 {
+  transform: translateZ(100px);
+  opacity: 0.7;
+}
+.layer0 {
+  opacity: 0.6;
+}
+.layer-1 {
+  transform: translateZ(-200px);
+  opacity: 0.5;
+}
+.layer-2 {
+  transform: translateZ(-400px), scale(1.5);
+  opacity: 0.4;
+}
+.layer-3 {
+  transform: translateZ(-600px), scale(2);
+  opacity: 0.3;
+}
+.layer-4 {
+  transform: translateZ(-800px), scale(3);
+  opacity: 0.2;
+}
+.layer-5 {
+  transform: translateZ(-1000px), scale(4);
+  opacity: 1;
+}
+.astronaut {
+  position: fixed;
+  height: 5vh;
+  top: 45vh;
+  left: 48vw;
+  /* transform: translateZ(500px); */
+  animation: floating 10s linear infinite;
+}
+@keyframes floating {
+  0% {margin-top: 0;}
+  15% {margin-top: 15px;}
+  50% {margin-top: 30px;}
+  /* 90% {margin-top: 50px;} */
+  /* 100% {margin-top: 0;} */
+}
+.bgEnd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF2D55;
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+.bgEnd.visible {
+  opacity: 1;
+}
